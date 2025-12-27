@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "luma-file": {
+      "iconPath": "../resources/icon.png"
+    }
+  },
+  "fileNames": {
+    "luma": "luma-file"
+  }
+}
