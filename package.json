@@ -2,7 +2,7 @@
   "name": "lumynus-luma",
   "displayName": "Lumynus Luma Support",
   "description": "Suporte a sintaxe Luma para o framework Lumynus",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "publisher": "Lumynus",
   "icon": "resources/logo.png",
   "engines": {
@@ -36,13 +36,6 @@
         "language": "luma",
         "scopeName": "text.html.php.luma",
         "path": "./syntaxes/luma.tmLanguage.json"
-      }
-    ],
-    "iconThemes": [
-      {
-        "id": "lumynus-luma-icons",
-        "label": "Lumynus Luma Icons",
-        "path": "./icons/luma-icon-theme.json"
       }
     ]
   }
