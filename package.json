@@ -4,6 +4,7 @@
   "description": "Suporte a sintaxe Luma para o framework Lumynus",
   "version": "1.0.0",
   "publisher": "Lumynus",
+  "icon": "resources/logo.png",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -11,10 +12,9 @@
     "Programming Languages"
   ],
   "repository": {
-  "type": "git",
-  "url": "https://github.com/lumynus/lumynus-luma-vscode.git"
-}
-,
+    "type": "git",
+    "url": "https://github.com/Lumynus/lumynus-vscode.git"
+  },
   "contributes": {
     "languages": [
       {
