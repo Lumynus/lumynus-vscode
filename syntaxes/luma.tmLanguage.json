@@ -1,10 +1,9 @@
 {
-  "scopeName": "text.html.luma",
-  "fileTypes": ["luma.php"],
+  "scopeName": "luma.injection",
+  "injectionSelector": "L:text.html, L:source.php",
   "patterns": [
     { "include": "#luma-directives" },
-    { "include": "#luma-echo" },
-    { "include": "source.php" }
+    { "include": "#luma-echo" }
   ],
   "repository": {
     "luma-directives": {
@@ -18,11 +17,9 @@
           "match": "@(include|use|js|css|header:js|header:css|selected|checked)\\b"
         },
         {
-          "begin": "(@php)",
-          "end": "(@endphp)",
-          "captures": {
-            "0": { "name": "keyword.control.luma" }
-          },
+          "begin": "@php\\b",
+          "end": "@endphp\\b",
+          "name": "meta.embedded.block.luma",
           "patterns": [
             { "include": "source.php" }
           ]
@@ -34,15 +31,13 @@
         {
           "begin": "\\{\\{",
           "end": "\\}\\}",
-          "name": "meta.tag.template.luma",
+          "name": "meta.expression.luma",
           "patterns": [
             {
               "match": "\\b(raw|int|float|string|bool)\\b",
               "name": "storage.type.luma"
             },
-            {
-              "include": "source.php"
-            }
+            { "include": "source.php" }
           ]
         }
       ]
