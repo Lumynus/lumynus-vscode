@@ -1,41 +1,25 @@
 {
   "name": "lumynus-luma",
   "displayName": "Lumynus Luma Support",
-  "description": "Suporte a sintaxe Luma para o framework Lumynus",
-  "version": "1.0.5",
-  "publisher": "Lumynus",
-  "icon": "resources/logo.png",
-  "engines": {
-    "vscode": "^1.70.0"
-  },
-  "categories": [
-    "Programming Languages"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Lumynus/lumynus-vscode.git"
-  },
+  "version": "1.0.6",
   "contributes": {
     "languages": [
       {
         "id": "luma",
-        "aliases": [
-          "Luma",
-          "luma"
-        ],
-        "extensions": [
-          ".luma",
-          ".php",
-          ".html"
-        ],
+        "aliases": ["Luma", "luma"],
+        "extensions": [".luma"], 
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "luma",
-        "scopeName": "text.html.php.luma",
-        "path": "./syntaxes/luma.tmLanguage.json"
+        "scopeName": "text.html.luma",
+        "path": "./syntaxes/luma.tmLanguage.json",
+        "injectTo": [
+          "text.html.basic",
+          "text.html.php",
+          "source.php"
+        ]
       }
     ]
   }
