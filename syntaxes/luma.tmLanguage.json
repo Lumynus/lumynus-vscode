@@ -1,16 +1,10 @@
 {
-  "scopeName": "text.html.php.luma",
+  "scopeName": "text.html.luma",
   "fileTypes": ["luma.php"],
   "patterns": [
-    {
-      "include": "#luma-directives"
-    },
-    {
-      "include": "#luma-echo"
-    },
-    {
-      "include": "text.html.php"
-    }
+    { "include": "#luma-directives" },
+    { "include": "#luma-echo" },
+    { "include": "source.php" }
   ],
   "repository": {
     "luma-directives": {
@@ -38,15 +32,9 @@
     "luma-echo": {
       "patterns": [
         {
-          "name": "meta.tag.template.luma",
           "begin": "\\{\\{",
-          "beginCaptures": {
-            "0": { "name": "punctuation.definition.tag.begin.luma" }
-          },
           "end": "\\}\\}",
-          "endCaptures": {
-            "0": { "name": "punctuation.definition.tag.end.luma" }
-          },
+          "name": "meta.tag.template.luma",
           "patterns": [
             {
               "match": "\\b(raw|int|float|string|bool)\\b",
