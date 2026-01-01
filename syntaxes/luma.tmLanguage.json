@@ -1,24 +1,20 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Lumynus Luma",
-  "scopeName": "text.html.luma",
-  "injectionSelector": "L:text.html.basic, L:text.html.php, L:source.php",
+  "name": "Lumynus Luma Directives",
+  "scopeName": "luma.directives",
+  "injectionSelector": "L:text.html.derivative | L:text.html.basic | L:source.php",
   "patterns": [
-    { "include": "#control-statements" },
-    { "include": "#directives" },
-    { "include": "text.html.basic" }
+    {
+      "include": "#directives"
+    }
   ],
   "repository": {
-    "control-statements": {
+    "directives": {
       "patterns": [
         {
           "name": "keyword.control.luma",
-          "match": "@(if|elseif|else|endif|for|endfor|foreach|endforeach|while|endwhile|switch|case|default|break|endswitch|exist|endexist|not|endnot)\\b"
-        }
-      ]
-    },
-    "directives": {
-      "patterns": [
+          "match": "@(if|elseif|else|endif|for|endfor|foreach|endforeach|while|endwhile|switch|case|default|break|endswitch|include|use)\\b"
+        },
         {
           "name": "entity.name.tag.luma",
           "match": "@(include|use|js|css|header:js|header:css|selected|checked)\\b"

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Luma HTML",
+  "scopeName": "text.html.luma",
+  "patterns": [
+    {
+      "include": "text.html.basic"
+    },
+    {
+      "include": "luma.directives"
+    }
+  ]
+}

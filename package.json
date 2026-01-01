@@ -1,26 +1,43 @@
 {
   "name": "lumynus-luma",
   "displayName": "Lumynus Luma Support",
-  "version": "1.0.6",
+  "version": "1.0.18",
+  "publisher": "Lumynus",
+  "icon": "./resources/logo.png",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
   "contributes": {
     "languages": [
       {
         "id": "luma",
-        "aliases": ["Luma", "luma"],
-        "extensions": [".luma"], 
+        "aliases": [
+          "Luma",
+          "luma"
+        ],
+        "extensions": [
+          ".luma"
+        ],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "scopeName": "text.html.luma",
+        "scopeName": "luma.directives",
         "path": "./syntaxes/luma.tmLanguage.json",
         "injectTo": [
+          "text.html.derivative",
           "text.html.basic",
+          "text.html.luma",
           "text.html.php",
           "source.php"
         ]
       }
-    ]
+    ],
+    "configurationDefaults": {
+      "files.associations": {
+        "*.luma": "html"
+      }
+    }
   }
 }
