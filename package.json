@@ -1,7 +1,7 @@
 {
   "name": "lumynus-luma",
   "displayName": "Lumynus Luma Support",
-  "version": "1.0.28",
+  "version": "1.0.14",
   "publisher": "Lumynus",
   "icon": "./resources/logo.png",
   "engines": {
