@@ -1,7 +1,7 @@
 {
   "name": "lumynus-luma",
   "displayName": "Lumynus Luma Support",
-  "version": "1.0.18",
+  "version": "1.0.26",
   "publisher": "Lumynus",
   "icon": "./resources/logo.png",
   "engines": {
@@ -22,6 +22,11 @@
       }
     ],
     "grammars": [
+      {
+        "language": "luma",
+        "scopeName": "text.html.luma",
+        "path": "./syntaxes/luma-base.tmLanguage.json"
+      },
       {
         "scopeName": "luma.directives",
         "path": "./syntaxes/luma.tmLanguage.json",
