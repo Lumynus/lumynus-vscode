@@ -3,6 +3,7 @@
   "name": "Luma HTML",
   "scopeName": "text.html.luma",
   "patterns": [
+    { "include": "luma.directives" },
     { "include": "text.html.derivative" }
   ]
 }
