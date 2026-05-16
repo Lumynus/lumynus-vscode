@@ -4,6 +4,10 @@
   "version": "1.0.14",
   "publisher": "Lumynus",
   "icon": "./resources/logo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lumynus/lumynus-vscode.git"
+  },
   "engines": {
     "vscode": "^1.80.0"
   },
