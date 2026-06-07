@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
   "name": "Lumynus Luma Directives",
   "scopeName": "luma.directives",
-  "injectionSelector": "L:text.html.derivative | L:text.html.basic | L:source.php | L:text.html.luma",
+  "injectionSelector": "L:text.html.derivative, L:text.html.basic, L:source.php, L:text.html.luma, L:text.html.php",
   "patterns": [
     {
       "include": "#directives"
@@ -12,12 +12,44 @@
     "directives": {
       "patterns": [
         {
-          "name": "keyword.control.luma",
-          "match": "@(if|elseif|else|endif|for|endfor|foreach|endforeach|while|endwhile|switch|case|default|break|endswitch|include|use)\\b"
+          "name": "meta.directive.with-args.luma",
+          "begin": "(?i)(@)(if|elseif|foreach|for|while|switch|case|include|use|js|css|header:js|header:css|selected|checked|exist|not)\\s*(\\()",
+          "beginCaptures": {
+            "1": { "name": "keyword.control.luma" },
+            "2": { "name": "keyword.control.luma" },
+            "3": { "name": "punctuation.definition.parameters.begin.luma" }
+          },
+          "end": "(\\))",
+          "endCaptures": {
+            "1": { "name": "punctuation.definition.parameters.end.luma" }
+          },
+          "contentName": "meta.embedded.line.php",
+          "patterns": [
+            { "include": "source.php" }
+          ]
         },
         {
-          "name": "entity.name.tag.luma",
-          "match": "@(include|use|js|css|header:js|header:css|selected|checked)\\b"
+          "name": "keyword.control.luma",
+          "match": "(?i)@(else|endif|endfor|endforeach|endwhile|default|break|endswitch|endexist|endnot)\\b"
+        },
+        {
+          "name": "meta.output.luma",
+          "begin": "(\\{\\{)",
+          "beginCaptures": {
+            "1": { "name": "punctuation.section.embedded.begin.luma" }
+          },
+          "end": "(\\}\\})",
+          "endCaptures": {
+            "1": { "name": "punctuation.section.embedded.end.luma" }
+          },
+          "contentName": "meta.embedded.line.php",
+          "patterns": [
+            {
+              "name": "keyword.other.cast.luma",
+              "match": "\\b(int|float|string|bool|raw)\\b"
+            },
+            { "include": "source.php" }
+          ]
         }
       ]
     }
