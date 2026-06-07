@@ -2,7 +2,7 @@
   "name": "lumynus-luma",
   "displayName": "Lumynus Luma Support",
   "description": "Suporte oficial para a engine de templates Luma do framework PHP Lumynus. Focado em alta performance, simplicidade e elegância.",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "publisher": "Lumynus",
   "icon": "./resources/logo.png",
   "repository": {
