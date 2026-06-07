@@ -28,11 +28,29 @@
           "light": "./resources/luma-icon.svg",
           "dark": "./resources/luma-icon.svg"
         }
+      },
+      {
+        "id": "luma-cli",
+        "aliases": [
+          "Luma CLI"
+        ],
+        "filenames": [
+          "luma"
+        ],
+        "icon": {
+          "light": "./resources/icon.png",
+          "dark": "./resources/icon.png"
+        }
       }
     ],
     "grammars": [
       {
         "language": "luma",
+        "scopeName": "text.html.luma",
+        "path": "./syntaxes/luma-base.tmLanguage.json"
+      },
+      {
+        "language": "luma-cli",
         "scopeName": "text.html.luma",
         "path": "./syntaxes/luma-base.tmLanguage.json"
       },
